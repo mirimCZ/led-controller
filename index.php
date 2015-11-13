@@ -97,8 +97,7 @@ function isChecked($values, $x) {
             $('#messages').html('<p id="success-message" class="alert alert-success">Uloženo</p><pre>' + response + '</pre>');
           })
           .fail(function(response) {
-            alert('Saving failed, see console.');
-            console.warn(response);
+            $('#messages').html('<p id="success-message" class="alert alert-danger">Chyba!</p><pre>' + response + '</pre>');
           })
       }
 
