@@ -9,6 +9,6 @@ if(!empty($_POST)) {
   $cache[] = 'pwm ' . intval($_POST['pwm'][0]) . ' ' . intval($_POST['pwm'][1]) . ' ' . intval($_POST['pwm'][2]);
   $cache[] = 'adc ' . floatval($_POST['adc']);
 
-  file_put_contents('values.txt', join("\n", $cache));
+  file_put_contents('values.txt', '$' . join("\n", $cache));
   echo join("<br/>", $cache);
 }
